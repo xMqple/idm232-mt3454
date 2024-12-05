@@ -14,7 +14,7 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
 $recipe_id = intval($_GET['id']); // Ensure the ID is an integer
 
 // Prepare and execute a SQL query to fetch recipe details
-$statement = $connection->prepare('SELECT * FROM recipes_test_run WHERE id = ?');
+$statement = $connection->prepare('SELECT * FROM recipes WHERE id = ?');
 $statement->bind_param('i', $recipe_id);
 $statement->execute();
 
@@ -32,12 +32,10 @@ if (!$recipe) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/detail.css">
-    <title><?php echo $recipe['title']; ?> - Recipe Details</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/recipe-info.css">
+    <!--<a href="https://www.flaticon.com/free-icons/clock" title="clock icons">Clock icons created by dmitri13 - Flaticon</a>-->
+
+    <title><?php echo $recipe['title']; ?> - Recipe Information</title>
 </head>
 
 <body>
@@ -64,25 +62,44 @@ if (!$recipe) {
     <img src="pics/<?php echo $recipe['main_image']; ?>" alt="Recipe Image" class="recipe-image">
 
     <!-- Recipe Information -->
-    <p><strong>Cooking Time:</strong> <?php echo $recipe['cook_time']; ?></p>
-    <p><strong>Serving Size:</strong> <?php echo $recipe['serving_size']; ?></p>
-    <p><strong>Protein:</strong> <?php echo $recipe['protein']; ?></p>
-    <p><strong>Calories:</strong> <?php echo $recipe['calories']; ?></p>
-
+    <section class="recipe-info-container"> 
+    <ul>
+        <li> 
+            <img class="recipe-icon" src = "images/time.png" alt= clock>
+            <p class ="recipe-info"><strong>Cooking Time:</strong> <?php echo $recipe['cook_time']; ?></p>
+        </li>
+        <li>
+            <img class="recipe-icon" src = "images/serving.png" alt= serving>
+            <p class ="recipe-info"><strong>Serving Size:</strong> <?php echo $recipe['serving_size']; ?></p>
+        </li>
+        <li>
+            <img class="recipe-icon" src = "images/protein.png" alt= protein>
+            <p class ="recipe-info"><strong>Protein:</strong> <?php echo $recipe['protein']; ?></p>
+        </li>
+        <li>
+            <img class="recipe-icon" src = "images/calories.png" alt= calories>
+            <p class ="recipe-info"><strong>Calories:</strong> <?php echo $recipe['calories']; ?></p>
+        </li>
+    </ul>
+        </section>
     <!-- Recipe Description -->
     <p><strong>Description:</strong> <?php echo $recipe['description']; ?></p>
 
     <!-- Ingredients List -->
-    <img src="pics/<?php echo $recipe['ingredients_image']; ?>" alt="Ingredient image" class="ingredient-image">
-    <h2>Ingredients</h2>
-    <ul>
-        <?php
-        $ingredients = explode('*', $recipe['ingredients']);
-        foreach ($ingredients as $ingredient) {
-            echo '<li>' . $ingredient . '</li>';
-        }
-        ?>
-    </ul>
+    <section class="ingredients">
+        <img src="pics/<?php echo $recipe['ingredients_image']; ?>" alt="Ingredient image" class="ingredient-image">
+        <h2>Ingredients</h2>
+        <div class="ingredients-container">
+        <ul>
+            <?php
+            $ingredients = explode('*', $recipe['ingredients']);
+            foreach ($ingredients as $ingredient) {
+                echo '<li>' . $ingredient . '</li>';
+            }
+            ?>
+        </ul>
+        </div>
+    </section>
 
     <!-- Steps List -->
     <h2>Steps</h2>

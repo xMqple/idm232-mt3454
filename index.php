@@ -88,12 +88,13 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cozy Bites</title>
+    <title>Cozybites</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- Navigation -->
 <div class="hero">
     <div class="hero-text">
         <a href="index.php">
@@ -146,7 +147,7 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
 
     <!-- Reset Button -->
     <form action="index.php" method="get">
-        <button type="submit" class="reset-button">Reset Filters</button>
+        <button type="submit" class="reset-button">Reset</button>
     </form>
 </div>
 
@@ -155,7 +156,7 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
     <?php foreach ($recipes as $recipe): ?>
         <div class="recipe-card">
             <!-- Recipe Image -->
-            <a href="detail.php?id=<?php echo $recipe['id']; ?>" class="recipe-link">
+            <a href="recipe-info.php?id=<?php echo $recipe['id']; ?>" class="recipe-link">
                 <img src="pics/<?php echo ($recipe['main_image']); ?>" alt="Recipe Image" class="recipe-image">
                 <h2 class="recipe-title"><?php echo ($recipe['title']); ?></h2>
                 <h3 class="recipe-subtitle"><?php echo ($recipe['subtitle']); ?></h3>

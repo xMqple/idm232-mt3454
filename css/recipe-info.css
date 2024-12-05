@@ -92,6 +92,26 @@
   font-family: var(--font-body-bold);
   color: white;
 }
+  .help {
+  text-align: right;
+  padding: 10px;
+}
+  
+.help button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: var(--light-pink);
+  font-family: var(--font-body-bold);
+  font-size: 16px;
+  color: white;
+}
+  
+.help button:hover {
+  cursor: pointer;
+  background-color: var(--dark-pink);
+  font-family: var(--font-body-bold);
+  color: white;
+}
   
 .help-content {
   margin: 0px 40px;
@@ -108,7 +128,8 @@
   
 .help-content h2 {
   font-family: var(--font-body);
-  text-align: center;
+  letter-spacing: 6px;
+  padding-bottom: 10px;
 }
   
 .help-content li {
@@ -122,7 +143,7 @@
   padding: 20px;
   font-size: 24px;
 }
-  
+ 
 /* Body Styles */
 body {
   font-family: var(--font-body);
@@ -130,117 +151,73 @@ body {
   padding: 20px;
   background-color: white;
 }
-  
-/* Search Form */
-.search-form {
-  display: flex;
-  justify-content: center;
+
+/* text */
+h2 {
   margin-bottom: 20px;
 }
-  
-.search-form input[type="text"] {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 300px;
-  font-family: var(--font-body);
-}
-  
-.search-form button {
-  padding: 10px 20px;
-  background-color: var(--light-green);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-left: 10px;
-}
-
-/* Hover Effect On Search Button */
-.search-form button:hover {
-  background-color: var(--dark-green);
-}
-  
-/* Filter Button Container */
-.filter-button {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 30px;
-  font-family: var(--font-body);
-}
-  
-.filter-button form button {
-  padding: 10px 20px;
-  background-color: var(--light-pink);
-  color: white;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transform: translateY(0); /* Set default transform */
-  transition: transform 0.5s ease;
-}
-
-/* Hover Effect On Filter */
-.filter-button form button:hover {
-  background-color: var(--dark-pink);
-  transform: translateY(-5px);
-  transition: transform 0.5s ease;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-  
-/* Recipe Cards Display */
-.recipe-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-  
-/* Recipe Card Styles */
-.recipe-card {
-  background-color: var(--dark-green);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  padding: 20px;
+h1, h2{
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--darkest-green);
 }
-  
-.recipe-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-  
-/* Recipe Image */
-.recipe-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-  
-/* Recipe Title and Subtitle */
-.recipe-title {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-top: 10px;
-  color: white;
-}
-  
-.recipe-subtitle {
-  font-size: 1.1em;
-  color: white;
-  margin-top: 5px;
-}
-  
-/* Recipe Information */
 
-.recipe-card p {
-  font-size: 14px;
-  color: white;
-  margin-top: 10px;
+p {
+  color: var(--darkest-green);
+  font-size: 16px;
+  margin-bottom: 10px;
 }
+
+/* Ingredient Image */
+
+.ingredients img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 15px;
+  border: 15px solid var(--dark-pink);
+  border-radius: 10px;
+}
+
+.ingredients-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Recipe Image */
+.steps-container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 15px;
+  border: 15px solid var(--dark-pink);
+  border-radius: 10px;
+}
+
+.recipe-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Recipe Info */
+.recipe-info-container {
+  display: flex;
+  justify-content: center;
+}
+
+.recipe-info {
+  display: inline-block;
+  font-size: 20px;
+}
+.recipe-icon {
+  width: 20px;
+}
+
+.ingredients-container ul {
+  margin: 0 auto;
+}
+
   
