@@ -1,0 +1,300 @@
+/* Fonts Imported */
+@font-face {
+  font-family: 'NunitoRegular';
+  src: url('../fonts/nunito-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NunitoMedium_Italic';
+  src: url('../fonts/nunito-mediumitalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NunitoBold';
+  src: url('../fonts/nunito-bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NunitoBold_Italic';
+  src: url('../fonts/nunito-bolditalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+  
+  /* Root and Custom Properties */ 
+:root {
+  /* fonts */
+  --font-body: 'NunitoRegular', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  --font-body-bold: 'NunitoMedium_Italic', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body-bold: 'NunitoBold', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body-bold-italic: 'NunitoBold_Italic', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* colors */
+  --dark-brown: #4d2d18;
+  --light-brown: #8a6240;
+  --beige: #caba9c;
+  --lime-green: #a3b18a;
+  --light-green: #588157;
+  --dark-green: #3a5a40;
+  --darkest-green: #102820;
+}
+  
+/* Hero */
+.hero{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+.hero-text {
+  flex: 1;
+}
+  
+.logo img {
+  width: 200px;
+}
+
+/* help */
+.help {
+  text-align: right;
+  padding: 10px;
+}
+  
+.help button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: var(--dark-green);
+  background-color: white;
+  border: 3px solid var(--dark-green);
+  font-family: var(--font-body-bold);
+  font-size: 16px;
+}
+  
+  .help button:hover {
+    cursor: pointer;
+    background-color: var(--dark-green);
+    font-family: var(--font-body-bold);
+    color: white;
+  }
+  
+  .help-content {
+    margin: 0px 40px;
+  }
+  
+  .help-content li {
+    font-family: var(--font-body);
+  }
+  
+  .help-content h3 {
+    font-family: var(--font-body);
+    margin-top: 20px;
+  }
+  
+  .help-content h2 {
+    font-family: var(--font-body);
+    letter-spacing: 6px;
+    padding-bottom: 10px;
+  }
+  
+  .help-content li {
+    margin: 20px 40px;
+  }
+  
+  .statement {
+    font-family: var(--font-body-bold);
+    color: var(--dark-green);
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+  }
+  
+  /* Body Styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    background-color: white;
+  }
+  
+  /* Search Form */
+  .search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+  }
+  
+  .search-form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  
+  .search-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Filter Button Container */
+  .filter-button {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .filter-button form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .filter-button form button:hover {
+    background-color: #218838;
+  }
+  
+  /* Reset Button */
+  .reset-button {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .reset-button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Recipe Cards Display */
+  .recipe-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Recipe Card Styles */
+  .recipe-card {
+    background-color: var(--light-green);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .recipe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Recipe Image */
+  .recipe-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Recipe Title and Subtitle */
+  .recipe-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .recipe-subtitle {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  /* Recipe Information */
+  .recipe-card p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  /* Recipe Description */
+  .recipe-description {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+  
+  /* Ingredients List */
+  .ingredients-list {
+    list-style-type: none;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+  
+  .ingredients-list li {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Steps Section */
+  .steps-container {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .step {
+    margin-bottom: 10px;
+  }
+  
+  .step strong {
+    font-weight: bold;
+  }
+  
+  .step p {
+    font-size: 14px;
+    color: #333;
+    margin-left: 10px;
+  }
+  
+  /* Recipe Link */
+  .recipe-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .recipe-link:hover {
+    text-decoration: underline;
+  }
