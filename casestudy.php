@@ -12,22 +12,21 @@
 <!-- Navigation -->
 <div class="hero">
     <div class="hero-text">
-        <a href="index.php">
-        <li class = "logo"> 
-        <a href="index.php"> <img src = "images/cozybites-logo.png" alt= Logo> </a> 
-        </li>
-        </a>
+        <div class = "logo"> 
+            <a href="index.php"> <img src = "images/cozybites-logo.png" alt= Logo> </a> 
+        </div>
     </div>
     <div class="casestudy">
-        <button onclick="window.location.href='casestudy.php';">Casestudy</button>    
+        <button onclick="window.location.href='casestudy.php';">Casestudy</button>
     </div>
     <div class="help">
-        <button onclick="window.location.href='help.php';">Help</button>    
+        <button onclick="window.location.href='help.php';">Help</button>
     </div>
 </div>
-<section class="case-study-img">
+
+<div class="case-study-img">
     <img src= "images/cozybites-hero.png" alt="Cozybites hero image">
-</section>
+</div>
 
 <section class="case-study-content">
     <h1> The Overview </h1>
@@ -62,17 +61,17 @@
 <section class="case-study-content">
     <h1> Process and Insight </h1>
     <h2> Alpha </h2>
-    <section class="casestudy-img">
+    <div class="casestudy-img">
         <img src= "images/cozybites-alpha.png" alt="Cozybites Alpha Desktop">
-    </section>
+    </div>
         <p> This was my alpha, the colors were very muted and bland which I wasn't going for. 
             I was looking for a more cozy vibe, hence the name "Cozybites." I also removed the 
             search bar on the recipe items pages and decided not to include a recipes tab for 
             the recipes because I wanted a simpler navigation experience.  </p>
     <h2> Final </h2>
-    <section class="casestudy-img">
+    <div class="casestudy-img">
         <img src= "images/cozybites-final.png" alt="Cozybites Final Desktop">
-    </section>
+    </div>
     <p> This was my final, I changed the colors from a green and brownish color scheme to 
         a pink and green one. I felt like the pink complements the green more than the brown
         and makes the food pop out more. I also included a filtering system ease of use when 

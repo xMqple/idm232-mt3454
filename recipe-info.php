@@ -43,20 +43,17 @@ if (!$recipe) {
 <!-- Navigation -->
 <div class="hero">
     <div class="hero-text">
-        <a href="index.php">
-        <li class = "logo"> 
-        <a href="index.php"> <img src = "images/cozybites-logo.png" alt= Logo> </a> 
-        </li>
-        </a>
+        <div class = "logo"> 
+            <a href="index.php"> <img src = "images/cozybites-logo.png" alt= Logo> </a> 
+        </div>
     </div>
     <div class="casestudy">
-        <button onclick="window.location.href='casestudy.php';">Casestudy</button>    
+        <button onclick="window.location.href='casestudy.php';">Casestudy</button>
     </div>
     <div class="help">
-        <button onclick="window.location.href='help.php';">Help</button>    
+        <button onclick="window.location.href='help.php';">Help</button>
     </div>
 </div>
-
 
 <section class="banner">
     <!-- Recipe Image Section -->
@@ -71,7 +68,7 @@ if (!$recipe) {
         <h2><?php echo $recipe['subtitle']; ?></h2>
         
         <!-- Recipe Information -->
-        <section class="recipe-info-container"> 
+        <div class="recipe-info-container"> 
         <ul>
             <li> 
                 <img class="recipe-icon" src = "images/time.png" alt= clock>
@@ -90,8 +87,9 @@ if (!$recipe) {
                 <p class ="recipe-info"><strong>Calories:</strong> <?php echo $recipe['calories']; ?></p>
             </li>
         </ul>
-    <!-- Recipe Description -->
-    <p><strong>Description:</strong> <?php echo $recipe['description']; ?></p>
+        </div>
+        <!-- Recipe Description -->
+        <p><strong>Description:</strong> <?php echo $recipe['description']; ?></p>
     </div>
 </section>
 
@@ -140,6 +138,5 @@ if (!$recipe) {
         }
         ?>
     </div>
-</div>
 </body>
 </html>

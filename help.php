@@ -12,19 +12,18 @@
 <!-- Navigation -->
 <div class="hero">
     <div class="hero-text">
-        <a href="index.php">
-        <li class = "logo"> 
-        <a href="index.php"> <img src = "images/cozybites-logo.png" alt= Logo> </a> 
-        </li>
-        </a>
+        <div class = "logo"> 
+            <a href="index.php"> <img src = "images/cozybites-logo.png" alt= Logo> </a> 
+        </div>
     </div>
     <div class="casestudy">
-        <button onclick="window.location.href='casestudy.php';">Casestudy</button>    
+        <button onclick="window.location.href='casestudy.php';">Casestudy</button>
     </div>
     <div class="help">
-        <button onclick="window.location.href='help.php';">Help</button>    
+        <button onclick="window.location.href='help.php';">Help</button>
     </div>
 </div>
+
 
     <section class="help-content">
         <h2>How to Use and Navigate Through This Website</h2>
@@ -41,7 +40,5 @@
                 <li>This is the current page, which describes and explains the functionality of the website. </li>
             </ul>
 </section>
-
-    <script src="scripts.js"></script>
 </body>
 </html>
