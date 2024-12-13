@@ -71,7 +71,23 @@
   width: 200px;
 }
 
-/* help */
+/* casestudy button */
+.casestudy button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: var(--dark-green);
+  font-family: var(--font-body-bold);
+  font-size: 16px;
+  color: white;
+}
+
+.casestudy button:hover {
+  cursor: pointer;
+  background-color: var(--darkest-green);
+  font-family: var(--font-body-bold);
+}
+
+/* help button */
 .help {
   text-align: right;
   padding: 10px;
@@ -90,11 +106,14 @@
   cursor: pointer;
   background-color: var(--dark-pink);
   font-family: var(--font-body-bold);
-  color: white;
 }
-  
-.help-content {
-  margin: 0px 40px;
+
+/* Help Page CSS*/
+.help-content { 
+  margin: 10px 40px;
+  background-color: var(--light-pink);
+  padding: 10px;
+  border-radius: 10px;
 }
   
 .help-content li {
@@ -243,4 +262,65 @@ body {
   color: white;
   margin-top: 10px;
 }
-  
+
+.recipe-info {
+  font-size: 20px;
+}
+
+.recipe-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Casestudy Page */
+.case-study-img img{
+  display: block;
+  width: 100%;
+}
+.case-study-content {
+  background-color: var(--light-pink);
+  border-radius: 15px;
+  padding: 16px;
+  color: var(--darkest-green);
+  margin-top: 20px;
+}
+.case-study-content h1{
+  font-size: 28px;
+}
+
+.case-study-content h2{
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.case-study-content li{
+  list-style: circle;
+  list-style-position: outside;
+  margin-left: 16px;
+}
+.casestudy-img {
+  align-items: center;
+}
+
+.casestudy-img img {
+  width: 100%;
+  height: auto;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .filter-button {
+    justify-content: center; 
+    flex-direction: column; 
+  }
+
+  .filter-button form {
+    flex-basis: 100%; 
+    text-align: center;
+  }
+
+  .filter-button form button {
+    width: 30%; 
+    margin-bottom: 5px; 
+  }
+}

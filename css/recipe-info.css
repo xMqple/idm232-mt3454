@@ -71,71 +71,6 @@
   width: 200px;
 }
 
-/* help */
-.help {
-  text-align: right;
-  padding: 10px;
-}
-  
-.help button {
-  padding: 10px 20px;
-  border-radius: 20px;
-  background-color: var(--light-pink);
-  font-family: var(--font-body-bold);
-  font-size: 16px;
-  color: white;
-}
-  
-.help button:hover {
-  cursor: pointer;
-  background-color: var(--dark-pink);
-  font-family: var(--font-body-bold);
-  color: white;
-}
-  .help {
-  text-align: right;
-  padding: 10px;
-}
-  
-.help button {
-  padding: 10px 20px;
-  border-radius: 20px;
-  background-color: var(--light-pink);
-  font-family: var(--font-body-bold);
-  font-size: 16px;
-  color: white;
-}
-  
-.help button:hover {
-  cursor: pointer;
-  background-color: var(--dark-pink);
-  font-family: var(--font-body-bold);
-  color: white;
-}
-  
-.help-content {
-  margin: 0px 40px;
-}
-  
-.help-content li {
-  font-family: var(--font-body);
-}
-  
-.help-content h3 {
-  font-family: var(--font-body);
-  margin-top: 20px;
-}
-  
-.help-content h2 {
-  font-family: var(--font-body);
-  letter-spacing: 6px;
-  padding-bottom: 10px;
-}
-  
-.help-content li {
-  margin: 20px 40px;
-}
-  
 .statement {
   font-family: var(--font-body-bold);
   color: var(--dark-green);
@@ -144,6 +79,43 @@
   font-size: 24px;
 }
  
+/* casestudy button */
+.casestudy button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: var(--dark-green);
+  font-family: var(--font-body-bold);
+  font-size: 16px;
+  color: white;
+}
+
+.casestudy button:hover {
+  cursor: pointer;
+  background-color: var(--darkest-green);
+  font-family: var(--font-body-bold);
+}
+
+/* help button */
+.help {
+  text-align: right;
+  padding: 10px;
+}
+
+.help button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: var(--light-pink);
+  font-family: var(--font-body-bold);
+  font-size: 16px;
+  color: white;
+}
+  
+.help button:hover {
+  cursor: pointer;
+  background-color: var(--dark-pink);
+  font-family: var(--font-body-bold);
+}
+
 /* Body Styles */
 body {
   font-family: var(--font-body);
@@ -156,9 +128,10 @@ body {
 h2 {
   margin-bottom: 20px;
 }
+
 h1, h2{
   text-align: center;
-  color: var(--darkest-green);
+  color: var(--dark-pink);
 }
 
 p {
@@ -167,9 +140,59 @@ p {
   margin-bottom: 10px;
 }
 
-/* Ingredient Image */
+/* Banner */
 
-.ingredients img {
+.banner{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 10px;
+}
+
+.banner-img, .banner-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.recipe-info-container{
+  justify-content: center;
+}
+
+.recipe-icon {
+  width: 20px;
+}
+
+.recipe-info {
+  display: inline-block;
+  font-size: 18px;
+}
+
+/*.banner img{
+  max-width: 100%;
+  height: auto;
+  flex: 1
+}*/
+
+/* Ingredients Section */
+.ingredients {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+}
+
+.ingredients-img, .ingredients-text {
+  flex: 1;
+  max-width: 45%;
+}
+
+.ingredients-img img {
+  max-width: 450px;
+}
+
+/*.ingredients img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -183,7 +206,7 @@ p {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
-}
+}*/
 
 /* Recipe Image */
 .steps-container img {
@@ -202,8 +225,57 @@ p {
     border-radius: 8px;
 }
 
-/* Recipe Info */
+/* Media Query */
+@media (max-width: 900px){
+.ingredients{
+  flex-direction: column; 
+  padding: 5px; 
+  gap: 10px; 
+  align-items: center;
+}
+
+.ingredients-img, .ingredients-text {
+  width: 100%; 
+}
+.ingredients-img img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+}
+
+@media (max-width: 768px) {
+.banner {
+  flex-direction: column; 
+  padding: 5px; 
+  gap: 10px; 
+}
+.banner-img, .banner-text {
+  max-width: 100%; 
+}
+.banner h1 {
+  font-size: 24px;
+}
+.banner h2 {
+  font-size: 16px;
+}
+.banner-detail p {
+  font-size: 12px;
+}
+
 .recipe-info-container {
+  justify-content: center;
+}
+
+.recipe-info {
+  font-size: 16px;
+}
+}
+
+
+/* Recipe Info */
+/*.recipe-info-container {
   display: flex;
   justify-content: center;
 }
@@ -218,6 +290,6 @@ p {
 
 .ingredients-container ul {
   margin: 0 auto;
-}
+}*/
 
   

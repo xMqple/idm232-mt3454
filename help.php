@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<!-- Navigation -->
 <div class="hero">
     <div class="hero-text">
         <a href="index.php">
@@ -17,26 +18,29 @@
         </li>
         </a>
     </div>
+    <div class="casestudy">
+        <button onclick="window.location.href='casestudy.php';">Casestudy</button>    
+    </div>
     <div class="help">
         <button onclick="window.location.href='help.php';">Help</button>    
     </div>
 </div>
 
-    <div class="help-content">
+    <section class="help-content">
         <h2>How to Use and Navigate Through This Website</h2>
         <h3>Homepage</h3>
             <ul>
                 <li><b>"Cozybites"</b> Logo: Takes the user to the homepage. </li>
                 <li><b>Help Button:</b> Takes users to the help page, which describes and explains the functionality of the website.</li>
                 <li><b>Filter:</b> The filter allows users to select the protein they want to cook with. </li>
-                <li><b>Search Bar:</b> The search bar allows users to narrow down the content that is shown to them by inserting key words. In this Alpha version, users can search up any gibberish, and an error message will pop up and wipe the content. However, if the user search for a term to specify their search. If there's no result, the user will be presented with a error message. </li>
+                <li><b>Search Bar:</b> The search bar allows users to narrow down the content that is shown to them by inserting key words.</li>
             </ul>
 
         <h3>Help Page</h3>
             <ul>
                 <li>This is the current page, which describes and explains the functionality of the website. </li>
             </ul>
-    </div>
+</section>
 
     <script src="scripts.js"></script>
 </body>

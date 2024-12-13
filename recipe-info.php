@@ -39,6 +39,8 @@ if (!$recipe) {
 </head>
 
 <body>
+
+<!-- Navigation -->
 <div class="hero">
     <div class="hero-text">
         <a href="index.php">
@@ -47,57 +49,67 @@ if (!$recipe) {
         </li>
         </a>
     </div>
+    <div class="casestudy">
+        <button onclick="window.location.href='casestudy.php';">Casestudy</button>    
+    </div>
     <div class="help">
         <button onclick="window.location.href='help.php';">Help</button>    
     </div>
 </div>
 
 
-<div class="recipe-detail">
-    <!-- Recipe Title -->
-    <h1><?php echo $recipe['title']; ?></h1>
-    <h2><?php echo $recipe['subtitle']; ?></h2>
+<section class="banner">
+    <!-- Recipe Image Section -->
+    <div class="banner-img">
+        <!-- Recipe Image -->
+        <img src="pics/<?php echo $recipe['main_image']; ?>" alt="Recipe Image" class="recipe-image">
+    </div>
 
-    <!-- Recipe Image -->
-    <img src="pics/<?php echo $recipe['main_image']; ?>" alt="Recipe Image" class="recipe-image">
-
-    <!-- Recipe Information -->
-    <section class="recipe-info-container"> 
-    <ul>
-        <li> 
-            <img class="recipe-icon" src = "images/time.png" alt= clock>
-            <p class ="recipe-info"><strong>Cooking Time:</strong> <?php echo $recipe['cook_time']; ?></p>
-        </li>
-        <li>
-            <img class="recipe-icon" src = "images/serving.png" alt= serving>
-            <p class ="recipe-info"><strong>Serving Size:</strong> <?php echo $recipe['serving_size']; ?></p>
-        </li>
-        <li>
-            <img class="recipe-icon" src = "images/protein.png" alt= protein>
-            <p class ="recipe-info"><strong>Protein:</strong> <?php echo $recipe['protein']; ?></p>
-        </li>
-        <li>
-            <img class="recipe-icon" src = "images/calories.png" alt= calories>
-            <p class ="recipe-info"><strong>Calories:</strong> <?php echo $recipe['calories']; ?></p>
-        </li>
-    </ul>
-        </section>
+    <div class="banner-text">
+        <!-- Recipe Title -->
+        <h1><?php echo $recipe['title']; ?></h1>
+        <h2><?php echo $recipe['subtitle']; ?></h2>
+        
+        <!-- Recipe Information -->
+        <section class="recipe-info-container"> 
+        <ul>
+            <li> 
+                <img class="recipe-icon" src = "images/time.png" alt= clock>
+                <p class ="recipe-info"><strong>Cooking Time:</strong> <?php echo $recipe['cook_time']; ?></p>
+            </li>
+            <li>
+                <img class="recipe-icon" src = "images/serving.png" alt= serving>
+                <p class ="recipe-info"><strong>Serving Size:</strong> <?php echo $recipe['serving_size']; ?></p>
+            </li>
+            <li>
+                <img class="recipe-icon" src = "images/protein.png" alt= protein>
+                <p class ="recipe-info"><strong>Protein:</strong> <?php echo $recipe['protein']; ?></p>
+            </li>
+            <li>
+                <img class="recipe-icon" src = "images/calories.png" alt= calories>
+                <p class ="recipe-info"><strong>Calories:</strong> <?php echo $recipe['calories']; ?></p>
+            </li>
+        </ul>
     <!-- Recipe Description -->
     <p><strong>Description:</strong> <?php echo $recipe['description']; ?></p>
+    </div>
+</section>
 
-    <!-- Ingredients List -->
+    <!-- Ingredients Section -->
     <section class="ingredients">
-        <img src="pics/<?php echo $recipe['ingredients_image']; ?>" alt="Ingredient image" class="ingredient-image">
-        <h2>Ingredients</h2>
-        <div class="ingredients-container">
-        <ul>
-            <?php
-            $ingredients = explode('*', $recipe['ingredients']);
-            foreach ($ingredients as $ingredient) {
+        <div class = "ingredients-img">
+            <img src="pics/<?php echo $recipe['ingredients_image']; ?>" alt="Ingredient image" class="ingredient-image">
+        </div>
+        <div class="ingredients-text">
+            <h2>Ingredients</h2>
+            <ul>
+                <?php
+                $ingredients = explode('*', $recipe['ingredients']);
+                foreach ($ingredients as $ingredient) {
                 echo '<li>' . $ingredient . '</li>';
-            }
-            ?>
-        </ul>
+                }
+                ?>
+            </ul>
         </div>
     </section>
 

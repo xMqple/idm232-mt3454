@@ -103,6 +103,9 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
         </li>
         </a>
     </div>
+    <div class="casestudy">
+        <button onclick="window.location.href='casestudy.php';">Casestudy</button>    
+    </div>
     <div class="help">
         <button onclick="window.location.href='help.php';">Help</button>    
     </div>
@@ -160,6 +163,7 @@ $recipes = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
                 <img src="pics/<?php echo ($recipe['main_image']); ?>" alt="Recipe Image" class="recipe-image">
                 <h2 class="recipe-title"><?php echo ($recipe['title']); ?></h2>
                 <h3 class="recipe-subtitle"><?php echo ($recipe['subtitle']); ?></h3>
+        </li>
             </a>
 
             <!-- Recipe Information -->
